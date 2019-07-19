@@ -1,0 +1,67 @@
+<!--pages/my/my.wxml-->
+<view class="body">
+  <view class="nav">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo"      bindgetuserinfo="getUserInfo">登录</button>
+    <block wx:else>
+    <view class="nav_t">
+      <image class="nav_img" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <view class="nav_item">
+        <text>{{userInfo.nickName}}</text>
+        <text>你好！</text>
+      </view>
+      <image class="nav_img1" src="../../../image/address_right.png" catchtap="onUserInfoClick"></image>
+    </view>
+    </block>
+  </view>
+  <view class="ment">
+    <view class="ment_t" style="border-left: none;" bindtap="dingdan">
+      <image src="../../../image/dingdan.png"></image>
+      <text>我的订单</text>
+    </view>
+    <view class="ment_t" bindtap="dizhi">
+      <image src="../../../image/address.png"></image>
+      <text>地址管理</text>
+    </view>
+    <view class="ment_t" bindtap="coupon">
+      <image src="../../../image/coupon.png"></image>
+      <text>优惠卷</text>
+    </view>
+  </view>
+  <view class="ment">
+    <view class="ment_t" style="border-left: none;" bindtap="shoucang">
+      <image src="../../../image/address.png"></image>
+      <text>我的收藏</text>
+    </view>
+    <view class="ment_t" bindtap="security">
+      <image src="../../../image/security.png"></image>
+      <text>我的足迹</text>
+    </view>
+    <view class="ment_t" bindtap="calling">
+      <image src="../../../image/kefu.png"></image>
+      <text>联系客服</text>
+    </view>
+  </view>
+  <view class="ment" style="border-bottom: none;">
+    <view class="ment_t" style="border-left: none;" bindtap="help">
+      <image src="../../../image/help.png"></image>
+      <text>帮助中心</text>
+    </view>
+    <view class="ment_t" bindtap="feedback">
+      <image src="../../../image/feedback.png"></image>
+      <text>意见反馈</text>
+    </view>
+    <view class="ment_t">
+    </view>
+  </view>
+</view>
+
+<view class='dialog-login' wx:if="{{showLoginDialog}}" catchtap='onCloseLoginDialog'>
+  <view class='dialog-body' catchtap='onDialogBody'>
+    <view class='title'>请选择登录方式</view>
+    <view class='content'>
+      <button type="warn" catchtap="onWechatLogin">微信登录</button>
+      <button lang="zh_CN" bindtap="getPhoneNumbe">账号密码登录</button>
+      <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">微信手机号码登陆</button>
+    </view>
+  </view>
+</view>

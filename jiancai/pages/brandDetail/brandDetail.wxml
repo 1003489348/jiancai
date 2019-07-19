@@ -1,0 +1,39 @@
+<view class="banner">
+  <image src="https://www.ledc.cn/{{data.logo}}"></image>
+  <view class="zidan">
+    <text>{{data.name}}</text>
+    <view class="line"></view>
+  </view>
+</view>
+<view class="desc">
+  <text>{{data.description}}</text>
+</view>
+<!-- <view class="cate" wx:for="{{data}}" wx:key="data">
+  <view class="b">
+    <view class="cate-item1"></view>
+    <view class="cate-item2"></view>
+  </view>
+</view> -->
+<view class="cate-item">
+  <view class="b">
+    <block wx:for="{{goodslist}}" wx:for-item="item" wx:key="{{index}}">
+      <view class="item {{index % 2 == 0 ? 'item-b' : ''}}">
+        <navigator bindtap='bindAaa' data-newsid="{{item.id}}">
+          <image class="img" src="https://www.ledc.cn/{{item.img}}" background-size="cover"></image>
+          <text class="name">{{item.name}}</text>
+        </navigator>
+        <text class="price">￥{{item.sell_price}}</text>
+
+        <view class="selnum">
+          <!-- wx:if="{{!item.spec_array}}" -->
+          <view class="cut {{item.count<=0 | !item.count ? 'hidden' : ''}}" bindtap="cutNumber" id="{{item.id}}" data-type="{{item.spec_array ? 'product' : 'goods'}}" data-i="{{index}}">-</view>
+          <input value="{{item.count}}" class="number {{item.count<=0 | !item.count ? 'hidden' : ''}}" disabled="true" type="number" />
+          <view id="{{item.id}}" class="add" bindtap="addcart">+</view>
+        </view>
+        <!-- <view class="selnum" wx:if="{{item.spec_array}}">
+            <view class="spec" bindtap="cutNumber" id="{{item.id}}" data-type="{{item.spec_array ? 'product' : 'goods'}}" data-i="{{index}}">选规格</view>
+          </view> -->
+      </view>
+    </block>
+  </view>
+</view>

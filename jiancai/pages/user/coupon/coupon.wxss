@@ -1,0 +1,131 @@
+/* pages/coupon/coupon.wxss */
+.body{
+  width: 100%;
+  height: 1205rpx;
+  background: rgb(244, 244, 244);
+}
+.top{
+  width: 100%;
+  height: 30rpx;
+}
+.nav{
+  width: 100%;
+  height: 120rpx;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+}
+.nav_t{
+  width: 90%;
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+}
+.nav_t input{
+  width: 462rpx;
+  height: 70rpx;
+  border: 1px solid #ccc;
+  border-radius: 5rpx;
+  font-size: 24rpx;
+  letter-spacing: 2rpx;
+}
+.nav_t button{
+  width: 160rpx;
+  height: 70rpx;
+  font-size: 28rpx;
+  line-height: 70rpx;
+  background: rgb(204, 204, 204);
+  border: none;
+  border-radius: 4rpx;
+  color: #fff;
+  margin-left: 50rpx;
+}
+.help{
+  width: 90%;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: 0 auto;
+  background: url(https://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/couponHelp-4768607555.png) 545rpx center no-repeat;
+  background-size: 28rpx;
+  text-align: right;
+  color: #999;
+  font-size: 25rpx;
+}
+.ment{
+  width: 90%;
+  height: 300rpx;
+  margin: 0 auto;
+  background: linear-gradient(to right,#cfa568,#e3bf79);
+}
+.ment_t{
+  width: 90%;
+  height: 230rpx;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.ment_t_t{
+  width: 120rpx;
+  font-size: 20rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 30rpx;
+  height: 30rpx;
+  background: #A48143;
+  margin: 20rpx 0;
+}
+.ment_t_z{
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+}
+.ment_t_z_item{
+  width: 400rpx;
+  display: flex;
+  flex-direction: column;
+}
+.ment_t_z_item text:nth-child(1){
+  font-size: 44rpx;
+  color: #fff;
+}
+.ment_t_z_item text:nth-child(2){
+  font-size: 24rpx;
+  color: #fff;
+  opacity: .8;
+  margin-top: 20rpx;
+}
+.ment_t_z button{
+  width: 162rpx;
+  height: 50rpx;
+  font-size: 24rpx;
+  border-radius: 5rpx;
+  color: #b69150;
+  line-height: 50rpx;
+  margin-top: 30rpx;
+}
+.ment_b{
+  width: 100%;
+  height: 70rpx;
+  background: rgb(0, 0, 0,.1);
+}
+.ment_b_item{
+  width: 90%;
+  margin: 0 auto;
+  height: 70rpx;
+  line-height: 70rpx;
+  display: flex;
+}
+.ment_b_item text{
+  font-size: 24rpx;
+  color: #fff;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.ment_b_item image{
+  width: 40rpx;
+  height: 24rpx;
+  margin-left: 40rpx;
+  margin-top: 20rpx;
+}

@@ -1,0 +1,91 @@
+.fenlei {
+  display: flex;
+}
+
+.swiper-tab {
+  width: 162rpx;
+  height: 1500rpx;
+  text-align: center;
+  line-height: 90rpx;
+  display: flex;
+  flex-direction: column;
+  background: #f5f5f5;
+}
+
+.swiper-tab-list {
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 90rpx;
+  color: #000;
+}
+
+.on {
+  color: #ab2b2b;
+  background: #fff;
+  border-left: 5rpx solid #ab2b2b;
+  font-size: 34rpx;
+}
+
+/* 左边样式结束 */
+
+.banner-top {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20rpx;
+  border-left: 1px solid #fafafa;
+}
+
+.cont-top {
+  float: left;
+  margin: 0 19rpx;
+}
+
+.image {
+  width: 273px;
+  height: 192rpx;
+  margin-top: 20rpx;
+}
+
+.banner {
+  height: 108rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.txt {
+  font-size: 24rpx;
+  text-align: center;
+  color: #333;
+  padding: 0 10rpx;
+  width: auto;
+}
+
+.line {
+  width: 40rpx;
+  height: 1px;
+  background: #d9d9d9;
+}
+
+.cont {
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+.img1 {
+  height: 144rpx;
+  width: 144rpx;
+}
+
+.wenben {
+  display: block;
+  text-align: center;
+  font-size: 24rpx;
+  color: #333;
+  height: 72rpx;
+  width: 144rpx;
+}

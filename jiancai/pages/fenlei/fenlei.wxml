@@ -1,0 +1,70 @@
+<view class="fenlei">
+  <view class="swiper-tab">
+    <view wx:for="{{currentCategory.categoryList}}" class="swiper-tab-list {{currentTab==index ? 'on' : ''}}" data-current="{{index}}" bindtap="swichNav" wx:key="">{{item.name}}</view>
+  </view>
+
+  <!-- 左边结束 --> 
+  <view class="banner-top">
+ <image class="image" src="{{img}}" role="img"></image>
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+    <swiper-item>
+      <view class="banner">
+        <text class="line"></text>
+        <text class="txt">家具照明分类</text>
+        <text class="line"></text>
+      </view>
+      <view class="cont">
+            <navigator url="/pages/more/more?title=1&id={{item.id}}&aaa={{index}}" class="cont-top" wx:for="{{jiaju.subCategoryList}}" wx:key="">
+                <image class="img1" src="{{RootUrl}}{{item.banner}}"></image>
+                <text class="wenben">{{item.name}}</text>
+            </navigator>
+        </view>
+
+    </swiper-item>
+    <swiper-item>
+      <view class="banner">
+        <text class="line"></text>
+        <text class="txt">商业照明分类</text>
+        <text class="line"></text>
+      </view>
+      <view class="cont">
+            <navigator url="/pages/more/more?title=5&id={{item.id}}&aaa={{index}}" class="cont-top" wx:for="{{shangye.subCategoryList}}" wx:key="">
+                <image class="img1" src="{{RootUrl}}{{item.banner}}"></image>
+                <text class="wenben">{{item.name}}</text>
+            </navigator>
+        </view>
+    </swiper-item>
+
+    <swiper-item>
+      <view class="banner">
+        <text class="line"></text>
+        <text class="txt">户外照明分类</text>
+        <text class="line"></text>
+      </view>
+      <view class="cont">
+            <navigator url="/pages/more/more?title=11&id={{item.id}}&aaa={{index}}" class="cont-top" wx:for="{{huwai.subCategoryList}}" wx:key="">
+                <image class="img1" src="{{RootUrl}}{{item.banner}}"></image>
+                <text class="wenben">{{item.name}}</text>
+            </navigator>
+        </view>
+    </swiper-item>
+
+    <swiper-item>
+      <view class="banner">
+        <text class="line"></text>
+        <text class="txt">配件分类</text>
+        <text class="line"></text>
+      </view>
+      <view class="cont">
+            <navigator url="/pages/more/more?title=14&id={{item.id}}&aaa={{index}}" class="cont-top" wx:for="{{peijian.subCategoryList}}" wx:key="">
+                <image class="img1" src="{{RootUrl}}{{item.banner}}"></image>
+                <text class="wenben">{{item.name}}</text>
+            </navigator>
+        </view>
+    </swiper-item>
+
+
+  </swiper>
+  </view>
+  <!-- 右边结束 -->
+</view>

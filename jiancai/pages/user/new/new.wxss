@@ -1,0 +1,42 @@
+/* pages/new/new.wxss */
+@import '../../../utils/weui.wxss';
+.weui-cells:before{
+  top:0;
+  border-top:1rpx solid white;
+}
+.weui-cell{
+  line-height: 3.5rem;
+}
+.weui-cells:after{
+  bottom:0;border-bottom:1rpx solid white
+}
+.weui-btn{
+  width: 80%;
+}
+.botter{
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+}
+.botter view{
+  width: 50%;
+  text-align: center;
+  line-height: 100rpx;
+  color: #fff;
+}
+.botter button{
+  width: 50%;
+  text-align: center;
+  line-height: 100rpx;
+  color: #fff;
+  border-radius: 0;
+}
+.botter view:nth-child(1){
+  background: #333;
+}
+.botter button{
+  background: #b4282d;
+}

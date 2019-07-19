@@ -1,0 +1,108 @@
+<view class="top">
+  <swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+    <view>
+      <block wx:for="{{banner}}" wx:key="{{item.id}}">
+        <swiper-item>
+          <image src="{{RootUrl}}{{item.img}}" class="slide-image" width="355" height="150" />
+        </swiper-item>
+      </block>
+    </view>
+  </swiper>
+  <!-- 轮播图结束 -->
+  <view class="banner1">
+    <navigator class="item" url="/pages/more/more?title=1&id=2&aaa=0" wx:for="{{channel}}" wx:key="{{item.id}}">
+      <image src="{{RootUrl}}{{item.img}}" background-size="cover"></image>
+      <text>{{item.name}}</text>
+    </navigator>
+  </view>
+  <view class="huibian"></view>
+</view>
+<!-- 头部结束 -->
+<view class="a-section a-brand">
+  <view class="h">
+    <navigator url="../brand/brand">
+      <text class="txt">品牌商直供</text>
+    </navigator>
+  </view>
+  <view class="b">
+    <view class="item item-1" wx:for="{{brand}}" wx:key="item.id">
+    <navigator url="{{item.link}}">
+        <view class="wrap">
+          <image class="img" src="{{RootUrl}}{{item.img}}" mode="aspectFill"></image>
+          <view class="mt">
+            <text class="brand">{{item.name}}</text>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  <view class="zhezhao"></view>
+  <!-- 遮罩层 -->
+  </view>
+  <view class="huibian"></view>
+</view>
+<!-- 内容区域结束 -->
+<view class="xinpin">
+  <view class="xinpin1">
+    <navigator url="../newGoods/newGoods">
+      <text class="txt">周一周四 · 新品首发</text>
+    </navigator>
+    <view class="xinpin2">
+      <van-row custom-class="xinpin2_1">
+      <!-- <navigator url="../goods/goods?id={{item.id}}"> -->
+        <van-col span="12" wx:for="{{xinpin}}" wx:key="item.id" bindtap='bindAaa' data-newsid="{{item.id}}">
+          <view class="xinpin2_1_1">
+            <image src="{{RootUrl}}{{item.img}}"></image>
+            <view class="xinpin2_1_1_1">
+              <text>{{item.name}}</text>
+              <text>￥{{item.sell_price}}</text>
+            </view>
+          </view>
+        </van-col>
+      <!-- </navigator> -->
+      </van-row>
+    </view>
+  </view>
+  <view class="huibian"></view>
+</view>
+<!-- 新品首发结束 -->
+<view class="renqi">
+  <view class="renqi1">
+    <view class="renqi1_1">人气推荐</view>
+  </view>
+  <view class="renqi2">
+    <van-row custom-class="renqi2_1" wx:for="{{renqi}}" wx:key="item.id" bindtap='bindAaa' data-newsid="{{item.id}}">
+      <van-col span="8" custom-class="renqi2_1_1">
+        <image src="{{RootUrl}}{{item.img}}"></image>
+      </van-col>
+      <van-col span="16" custom-class="renqi2_1_2">
+        <text>{{item.name}}</text>
+        <text>￥{{item.sell_price}}</text>
+      </van-col>
+    </van-row>
+  </view>
+</view>
+<!-- 人气推荐结束 -->
+ <view class="good-grid" wx:for="{{floorGoods}}" wx:key="{{item.id}}">
+    <view class="h">
+      <view>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+    <view class="b">
+      <block wx:for="{{item.goodsList}}" wx:for-index="iindex" wx:for-item="iitem" wx:key="{{iitem.id}}">
+        <view class="item {{iindex % 2 == 0 ? '' : 'item-b'}}">
+          <navigator bindtap='bindAaa' data-newsid="{{iitem.id}}">
+            <image class="img" src="{{RootUrl}}{{iitem.img}}" background-size="cover"></image>
+            <text class="name">{{iitem.name}}</text>
+            <text class="price">￥{{iitem.sell_price}}</text>
+          </navigator>
+        </view>
+      </block>
+      <view class="item item-b item-more">
+          <navigator url="/pages/more/more?title={{item.id}}&id={{item.id}}&aaa=0" class="more-a">
+            <view class="txt">{{'更多'+item.name+'好物'}}</view>
+            <image class="icon" src="../../image/icon_go_more.png" background-size="cover"></image>
+          </navigator>
+      </view>
+    </view>
+  </view>

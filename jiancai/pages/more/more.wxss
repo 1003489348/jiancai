@@ -1,0 +1,93 @@
+.swiper-tab {
+  text-align: center;
+  line-height: 80rpx;
+  display: flex;
+  overflow-x: auto;
+}
+
+.swiper-tab-list {
+  font-size: 30rpx;
+  color: #777;
+  flex-basis: 20%;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.on {
+  color: #b4282d;
+  border-bottom: 5rpx solid #b4282d;
+}
+
+.swiper-box {
+  margin: 50rpx 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: #f8f8f8;
+}
+
+.swiper-box view {
+  text-align: center;
+}
+.item {
+  background: #fff;
+  width: 365rpx;
+  margin-bottom: 6.25rpx;
+  padding-bottom: 33.333rpx;
+  height: auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.item navigator {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.item navigator image {
+  width: 302rpx;
+  height: 302rpx;
+}
+
+.name {
+  display: block;
+  height: 30rpx;
+  line-height: 30rpx;
+  margin: 11.5rpx 0 22rpx 0;
+  text-align: center;
+  overflow: hidden;
+  padding: 0 20rpx;
+  font-size: 27rpx;
+  color: #333;
+}
+
+.price {
+  text-align: center;
+  font-size: 30rpx;
+  color: #b4282d;
+  left: 30rpx;
+  bottom: 15rpx;
+}
+.go{
+  height: 100%;
+}
+.jiagou{
+  display: flex;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  justify-content:space-between;
+}
+.add{
+   background: #b4282d;
+   color: #f8f8f8;
+   border-radius: 50%;
+   width: 40rpx;
+   height: 40rpx;
+   font-size: 45rpx;
+   line-height: 35rpx;
+}

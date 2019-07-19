@@ -1,0 +1,50 @@
+<!--pages/coupon/coupon.wxml-->
+<view class="body">
+  <view class="top"></view>
+  <!-- 优惠码 -->
+  <view class="nav">
+    <view class="nav_t">
+      <input placeholder="  请输入优惠码"></input>
+      <button>兑换</button>
+    </view>
+  </view>
+  <view class="help">使用说明</view>
+  <!-- 优惠卷 -->
+  <view class="ment">
+    <view class="ment_t">
+      <view class="ment_t_t">新人专享</view>
+      <view class="ment_t_z">
+        <view class="ment_t_z_item">
+          <text>限时免单卷</text>
+          <text>2017.06.08·2017.06.11</text>
+        </view>
+        <button>去使用</button>
+      </view>
+    </view>
+    <view class="ment_b">
+      <view class="ment_b_item">
+        <text>简约陶瓷马克杯专享；小米用户福利；限时购、三石福利价、礼品卡及详情页标注不可用券特殊商品除外</text>
+        <image src="https://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/couponArrow-71315b4145.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="ment" style="margin-top: 30rpx;">
+    <view class="ment_t">
+      <view class="ment_t_t">新人专享</view>
+      <view class="ment_t_z">
+        <view class="ment_t_z_item">
+          <text>限时免单卷</text>
+          <text>2017.06.08·2017.06.11</text>
+        </view>
+        <button>去使用</button>
+      </view>
+    </view>
+    <view class="ment_b">
+      <view class="ment_b_item">
+        <text>简约陶瓷马克杯专享；小米用户福利；限时购、三石福利价、礼品卡及详情页标注不可用券特殊商品除外</text>
+        <image src="https://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/couponArrow-71315b4145.png"></image>
+      </view>
+    </view>
+  </view>
+</view>

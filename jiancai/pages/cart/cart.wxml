@@ -1,0 +1,51 @@
+<!--要是够车内没有数据，就行显示没有数据-->
+<view class="cart" hidden="{{iscart}}">
+  <image src="../../image/noCart.png" />
+  <view>去添加点东西吧</view>
+</view>
+<!--要是有数据，就显示数据-->
+<view class="cartList" hidden="{{!iscart}}">
+  <!--header-->
+  <view class="baoyou"></view>
+  <!--list item-->
+  <block wx:for="{{cart}}" wx:key="">
+    <view class="goods">
+      <!--左侧图片-->
+      <view>
+        <image src="https://www.ledc.cn/{{item.img}}" class="good-img" />
+      </view>
+      <!--右侧说明部分-->
+      <view class="good-cont">
+        <!--文字说明-->
+        <view class="goods-navigator">
+          <text class="good-name">{{item.name}}</text>
+        </view>
+        <!--价钱和购物加减的父盒子-->
+        <view class="good-price">
+          <text class="price">￥{{item.sell_price}}</text>
+          <view class="btn-box">
+            <view class="btn">
+              <button id="del{{index}}" type="default" size="mini" bindtap="delCount">-</button>
+              <input value="{{item.count}}" />
+              <button id="add{{index}}" type="default" size="mini" bindtap="addCount">+</button>
+            </view>
+            <image id="img{{index}}" src="../../image/address-del.png" bindtap="delGoods" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <!--footer-->
+  <view class="total">
+    <view class="total1">
+      <view class="total1_1">
+          <text>已选({{goodsCount}})</text>
+          <text>￥{{total}}</text>
+      </view>
+      <view class="total1_2">
+          <!-- <text>编辑</text> -->
+          <view class="total_js" size="mini">下单</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,72 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/fenlei/fenlei",
+    "pages/more/more",
+    "pages/brandDetail/brandDetail",
+    "pages/goods/goods",
+    "pages/cart/cart",
+    "pages/user/my/my",
+    "pages/user/new/new",
+    "pages/user/denglu/denglu",
+    "pages/user/addressList/addressList",
+    "pages/user/coupon/coupon",
+    "pages/user/feedback/feedback",
+    "pages/user/security/security",
+    "pages/user/shoucang/shoucang",
+    "pages/user/dingdan/dingdan"
+  ],
+  "usingComponents": {
+    "van-goods-action": "./utils/dist/goods-action/index",
+    "van-goods-action-icon": "./utils/dist/goods-action-icon/index",
+    "van-goods-action-button": "./utils/dist/goods-action-button/index",
+    "van-tabbar": "./utils/dist/tabbar/index",
+    "van-icon": "./utils/dist/icon/index",
+    "van-tabbar-item": "./utils/dist/tabbar-item/index",
+    "van-rate": "./utils/dist/rate/index",
+    "van-row": "./utils/dist/row/index",
+    "van-col": "./utils/dist/col/index",
+    "van-button": "./utils/dist/button/index",
+    "van-progress": "./utils/dist/progress/index"
+  },
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ab2b2b",
+    "navigationBarTitleText": "精品建材全球购",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "backgroundColor": "#fafafa",
+    "borderStyle": "black",
+    "selectedColor": "#b4282d",
+    "color": "#666",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/ic_menu_choice_nor.png",
+        "selectedIconPath": "image/ic_menu_choice_pressed.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/fenlei/fenlei",
+        "iconPath": "image/ic_menu_sort_nor.png",
+        "selectedIconPath": "image/ic_menu_sort_pressed.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "iconPath": "image/ic_menu_shoping_nor.png",
+        "selectedIconPath": "image/ic_menu_shoping_pressed.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/user/my/my",
+        "iconPath": "image/ic_menu_me_nor.png",
+        "selectedIconPath": "image/ic_menu_me_pressed.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

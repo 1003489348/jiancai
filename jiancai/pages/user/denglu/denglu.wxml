@@ -1,0 +1,13 @@
+<!--pages/user/denglu/denglu.wxml-->
+<view class="top">登录</view>
+<view class="from">
+  <input placeholder="  账号" value="{{list.user}}"></input>
+  <input placeholder="  密码" password='true' value="{{list.passd}}"></input>
+</view>
+<view class="item">
+  <text>注册</text>
+  <text>忘记密码</text>
+</view>
+<view class="butt">
+  <button bindtap="feedback">登录</button>
+</view>

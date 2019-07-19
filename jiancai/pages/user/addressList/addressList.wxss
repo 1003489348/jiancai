@@ -1,0 +1,96 @@
+/* pages/addressList/addressList.wxss */
+page{  
+  display: flex;  
+  flex-direction: column;  
+  height: 100%;  
+}
+.list{
+  width: 100%;
+  display: flex;
+}  
+.list_item{
+  width: 15%;
+  height: 60rpx;
+  color: #fff;
+  border-radius: 10rpx;
+  margin-top: 80rpx;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  /* text-align: center; */
+  background: #ab2b2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-name-wrap{
+  width: 75%;
+  margin: 0px 10px;
+  font-size: 14px;
+  color: #404040;
+}
+.ui-list-item-info{
+  margin: 5px 0px;
+  display: flex;
+  height: 80rpx;
+  line-height: 80rpx;
+  flex-direction: row;
+}
+.ui-list-item-info text:nth-child(1){
+  font-size: 40rpx;
+  color: #000;
+  font-weight: 0;
+}
+.ui-list-item-info text:nth-child(2){
+  font-size: 28rpx;
+  color: #333;
+}
+.ui-list-item-address{
+  color: #585c64;
+}
+.ui-list-item-time{
+  margin: 5px 0px;
+  color: #ab2b2b;
+}
+/* .ui-list-item-del{
+  position: absolute;
+  right: 10px;
+  color: #ab2b2b;
+  margin-top: -50rpx;
+} */
+/* 分割线 */
+.separate {
+  margin: 5px 0px;
+  height: 2rpx;
+  background-color: #f2f2f2;
+}
+.add-address{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background: #ab2b2b;
+  color: #fff;
+
+}
+.add-img{
+  margin-right: 15rpx;
+  width: 15px;
+  height: 15px;
+}
+.delete{
+  position: absolute;
+  top:0rpx;
+  background-color: #e64340;
+  width: 180rpx;
+  text-align: center;
+  z-index: 1;
+  right: 0;
+  color: #fff;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

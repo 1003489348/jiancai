@@ -1,0 +1,89 @@
+<view class="banner">
+  <swiper class="banner1" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+    <swiper-item>
+      <image src="{{RootUrl}}{{goodslist.img}}" background-size="cover"></image>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 轮播图结束 -->
+<view class="service-policy">
+  <view class="item">30天无忧退货</view>
+  <view class="item">48小时快速退款</view>
+  <view class="item">满88元免邮费</view>
+</view>
+<!-- 灰色边结束 -->
+<view class="biaoti">
+  <view class="biaoti1">
+    <view>{{goodslist.name}}</view>
+    <view class="biaoti1_1">￥{{goodslist.sell_price}}</view>
+    <view class="biaoti1_2">
+      <text>{{brand.name}}</text>
+    </view>
+  </view>
+  <view class="biaoti2">
+    <view class="biaoti2_1">
+      <text>请选择规格数量</text>
+      <van-icon name="arrow" />
+    </view>
+  </view>
+  <view class="huibian"></view>
+</view>
+<!-- 标题结束 -->
+<view class="canshu">
+  <view class="canshu1">
+    <view class="canshu1_1">商品参数</view>
+    <van-row custom-class="canshu2" wx:for="{{attribute}}" wx:key="item.id">
+      <van-col span="6" custom-class="canshu2_1">{{item.name}}</van-col>
+      <van-col span="18" custom-class="canshu2_2">{{item.attribute_value}}</van-col>
+      
+    </van-row>
+  </view>
+</view>
+<!-- 参数结束 -->
+<view class="detail">
+  <import src="../../lib/wxParse/wxParse.wxml" />
+  <template is="wxParse" data="{{wxParseData:goodsDetail.nodes}}" />
+</view>
+<!-- 内容区域结束 -->
+<view class="common-problem">
+  <view class="h">
+    <view class="line"></view>
+    <text class="title">常见问题</text>
+  </view>
+  <view class="b">
+    <view class="item" wx:for="{{issueList}}" wx:key="{{item.id}}">
+      <view class="question-box">
+        <text class="spot"></text>
+        <text class="question">{{item.question}}</text>
+      </view>
+      <view class="answer">
+        {{item.answer}}
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 常见问题结束 -->
+<view class="related-goods">
+  <view class="h">
+    <view class="line"></view>
+    <text class="title">大家都在看</text>
+  </view>
+  <view class="b">
+    <view class="item" wx:for="{{renqi}}" wx:key="{{item.id}}">
+      <navigator bindtap='bindAaa' data-newsid="{{item.id}}">
+        <image class="img" src="{{RootUrl}}{{item.img}}" background-size="cover"></image>
+        <text class="name">{{item.name}}</text>
+        <text class="price">￥{{item.sell_price}}</text>
+      </navigator>
+    </view>
+  </view>
+</view>
+<!-- 大家都在看结束 -->
+<view>
+  <van-goods-action>
+    <van-goods-action-icon icon="star-o" />
+    <van-goods-action-icon icon="cart-o" info="0" />
+    <van-goods-action-button text="立即购买" />
+    <van-goods-action-button text="加入购物车" type="warning" id="{{goodslist.id}}" bindtap="addcart"/>
+  </van-goods-action>
+</view>

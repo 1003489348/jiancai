@@ -1,0 +1,8 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "家具照明",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#b4282d",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

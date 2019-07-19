@@ -1,0 +1,17 @@
+<view class="swiper-tab">
+  <view wx:for="{{currentCategory}}" class="swiper-tab-list {{currentTab==index ? 'on' : ''}}" data-current="{{index}}" data-id="{{item.id}}" bindtap="swichNav" wx:key="">{{item.name}}</view>
+</view>
+
+<view class="swiper-box">
+  <view wx:for="{{goodslist}}" class="item" wx:key="">
+    <navigator bindtap='bindAaa' data-newsid="{{item.id}}">
+      <image src="https://www.ledc.cn/{{item.img}}">
+      </image>
+      <text class="name">{{item.name}}</text>
+    </navigator>
+      <view class="jiagou">
+          <text class="price">￥{{item.sell_price}}</text>
+          <view id="{{item.id}}" class="add" bindtap="addcart">+</view>
+      </view>
+  </view>
+</view>

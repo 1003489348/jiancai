@@ -1,0 +1,30 @@
+<!--pages/addressList/addressList.wxml-->
+<scroll-view class="scroll" scroll-y="true">
+  <view wx:for="{{addressList}}" wx:key="">
+  <view class="list">
+    <view class="product-name-wrap">
+      <view class="ui-list-item-info">
+      <!-- 姓名 -->
+      <text>{{item.consignee}}</text>
+      <!-- 电话 -->
+        <text decode="{{true}}" space="{{true}}">  &nbsp;&nbsp;{{item.mobile}}</text>
+      </view>
+      <!-- 地址 -->
+      <view class="ui-list-item-address">
+        {{item.address}}
+      </view>
+      <!-- 收货时间 -->
+      <view class="ui-list-item-time">
+        <p>{{item.transportDay}}</p>
+      </view>
+    </view>
+    <view class="list_item">
+      <p class="ui-list-item-del" data-id="{{index}}" bindtap="delAddress">删除</p>
+    </view>
+  </view>
+  <view class="separate"></view>
+  </view>
+</scroll-view>
+<view class="add-address" bindtap="addAddress">
+  新增地址
+</view>
